@@ -1,7 +1,7 @@
 #!/bin/bash
 thread_num=(1 2 3 4 8 16 24 32)
 FILE="./MT_matrix"
-PATH_BENCH="Test_case_1"
+PATH_BENCH="Test_case_*"
 KEY_WORD="real"
 RESULT_FILE="record_time.txt"
 
