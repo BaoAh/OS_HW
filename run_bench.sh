@@ -24,7 +24,7 @@ do
     for i in ${thread_num[@]}
     do
         echo "--> running in $i num of thread" | tee -a $RESULT_FILE
-		{ time $FILE $i $PATH_BENCH/m1.txt $PATH_BENCH/m2.txt ; } 2> tmp 
+		{ time $FILE $i $j/m1.txt $j/m2.txt ; } 2> tmp 
 		cat tmp | grep $KEY_WORD | tee -a $RESULT_FILE
     done
     
