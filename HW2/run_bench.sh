@@ -5,13 +5,13 @@ PATH_BENCH="Test_case_*"
 KEY_WORD="real"
 RESULT_FILE="record_time.txt"
 
-rm $RESULT_FILE
+rm tmp result.txt
+rm $RESULT_FILE 
 touch $RESULT_FILE
 sudo make unload
 make clean
 make all
 #gcc -o MT_matrix MT_matrix.c -lpthread
-rm tmp
 touch tmp
 echo "--------------------------"
 echo "Start running test case"
@@ -26,6 +26,6 @@ do
                 cat tmp | grep $KEY_WORD | tee -a $RESULT_FILE
         make unload
     done
-
+    rm result.txt
 done
 rm tmp
