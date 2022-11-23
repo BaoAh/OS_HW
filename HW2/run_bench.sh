@@ -1,7 +1,7 @@
 #!/bin/bash
 thread_num=(1 2 3 4 8 16 24 32)
 FILE="./MT_matrix"
-PATH_BENCH="Test_case_3"
+PATH_BENCH="Test_case_*"
 KEY_WORD="real"
 RESULT_FILE="record_time.txt"
 
@@ -10,7 +10,7 @@ touch $RESULT_FILE
 sudo make unload
 make clean
 make all
-gcc -o MT_matrix MT_matrix.c -lpthread
+#gcc -o MT_matrix MT_matrix.c -lpthread
 rm tmp
 touch tmp
 echo "--------------------------"
